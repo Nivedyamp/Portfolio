@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="media.css"/>
+</head>
+<body>
+    <!--Navigation bar-->
+    <nav id="desktop-nav">
+        <div id="logo">Nivedya M P</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <!--Hamburger Menu-->
+    <nav id="hamburger-nav">
+        <div class="logo">Nivedya M P</div>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu-links">
+                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--Home-->
+    <section id="profile">
+        <div class="section_pic-container">
+            <img class="profile-pic" src="profile-pic.jpg" alt="Nivedya M P">
+        </div>
+        <div class="section_text">
+            <p id="home" class="section_text_p1">Hello, I'm</p>
+            <h1 class="title">Nivedya M P</h1>
+            <p class="section_text_p2">Welcome to my portfolio! I'm exctied to share my portfolio with you, showcasing my growth as an MCA student. Take a look around and let's connect!</p>
+            <div class="btn-container">
+                <button class="btn-btn-color-2" onclick="window.open('NivedyaMPResume.pdf')">Download Resume</button>
+            </div>
+        </div>
+    </section>
+    <!--About-->
+    <section id="about">
+        <h1 class="title">About me</h1>
+        <div class="about-details-container">
+            <div class="about-container">
+                <div class="details-container">
+                    <p>Enthusiastic and passionate MCA student seeking job opportunities. My academic journey has equipped me with a strong foundation in computer science principles and practical application. I'm eager to apply my software skills in a professional setting.</p>
+                </div>
+                <div>
+                    <h3>Skills and Interests</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Projects-->
+    <section id="projects">
+        <h1 class="title">Projects</h1>
+        
+        <div class="project">
+            <h3>Project One</h3>
+            <button class="btn btn-color-2 project-btn" onclick="openModal('modal1')">Description</button>
+        </div>
+    
+        <div class="project">
+            <h3>Project Two</h3>
+            <button class="btn btn-color-2 project-btn" onclick="openModal('modal2')">Description</button>
+        </div>
+    
+        <div class="project">
+            <h3>Project Three</h3>
+            <button class="btn btn-color-2 project-btn" onclick="openModal('modal3')">Description</button>
+        </div>
+        <!--Modal-->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <h3>Startup Success Prediction</h3>
+                <p>Predicting startup success using machine learning built in IBM Watsonx Studio for the internship conducted by IBM SkillsBuild with
+                    CSRBOX on AI-ML. This model aids investors and entrepreneurs in making informed decisions and strategic planning.</p>
+            </div>
+        </div> 
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <h3>Detection of Virtual Hard Disk encryption</h3>
+                <p>Detection of Virtual Hard Disk encryption and recovery of data using open source tools like VeraCrypt, Magnet Encrypted Disk Detector, Autopsy, Password Cruncher to recover encrypted data
+                    from an USB drive found from the scene of crime to retrieve evidence for internship conducted by C-DAC, NOIDA.</p>
+            </div>
+        </div>   
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal3')">&times;</span>
+                <h3>Exoplanet Habitability Prediction</h3>
+                <p>Predicting the habitability of exoplanets using Machine Learning with scikit-learn library in Python.</p>
+            </div>
+        </div>
+    </section>   
+    <!--Contact--> 
+    <section id="contact">
+        <h1 class="title">Contact</h1>
+        <ul>
+            <li><p>Kedharam House, Chettupuzha, Thrissur</p></li>
+            <li><p>+91 8590880643</p></li>
+            <li><p>nivedyaprashy2002@gmail.com</p></li>
+        </ul>
+        <!--Form-->
+        <h3 class="title">Send Message</h3>
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required><br/>
+        <input type="email" id="email" placeholder="Your Email" required><br/>
+        <textarea id="message" placeholder="Your Message" required></textarea><br/>
+        <button type="submit">Send</button>
+    </form>
+    <div id="thankYouMessage" style="display:none; text-align:center; margin-top: 20px;">
+        Thank you for your message!
+    </div>
+    </section>
+    <!--Footer-->
+    <footer>
+        <p>&copy;2024 Nivedya M P. All rights reserved.</p>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>
